@@ -39,3 +39,32 @@ This endpoint registers a new user. It validates the following fields:
 -`email` (string): User's email address (must be a valid email).
 - `password` (string): User's password (minimum 6 characters).
 - `token` (String): JWT Token
+
+## `/users/login` Endpoint
+
+### Description
+
+This endpoint authenticates an existing user and returns an authentication token.
+
+### Request Body Example
+```json
+{
+  "email": "john@example.com",
+  "password": "secret123"
+}
+```
+
+### Response Status Codes
+- **200 OK**: Returns the authenticated user object and a JWT token.
+- **400 Bad Request**: Validation errors.
+- **401 Unauthorized**: Invalid email or password.
+
+### Example Response
+
+-`user` (object):
+- `fullname` (object). I
+-`firstname` (string): User's first name (minimum 3 characters).
+-`lastname` (string): User's last name (minimum 3 characters).
+-`email` (string): User's email address (must be a valid email).
+- `password` (string): User's password (minimum 6 characters).
+- `token` (String): JWT Token
